@@ -111,8 +111,9 @@ class BlockGridTest {
 		Boolean matchValue = old.equals(Color.WHITE);
 		assertEquals(matchValue, true);
 
-		BlockGrid gridTest = new BlockGrid(2,3);
-		TetrisBlock.RIGHT_L.setLocation(0,2).draw(gridTest);
+		BlockGrid gridTest = new BlockGrid(5,7);
+
+		TetrisBlock.RIGHT_L.setLocation(3,5).draw(gridTest);
 
 		int iterations = 0;
 		
@@ -121,8 +122,17 @@ class BlockGridTest {
 	            iterations++;
 	        }
 		} 
-		//System.out.println("iterations " + iterations);
-		assertEquals(6, iterations);  
+		
+		assertEquals(35, iterations); 
+        //setForeground(Color.RED);  
+		TetrisBlock.RIGHT_L.setLocation(5,3).draw(gridTest);
+		TetrisBlock.SQUARE.setLocation(2,3).draw(gridTest);
+		TetrisBlock.LEFT_L.setLocation(5,7).draw(gridTest);
+		TetrisBlock.TEE.setLocation(3,2).draw(gridTest);
+		TetrisBlock.LONG .setLocation(1,2).draw(gridTest);
+
+ 
+		//TetrisBlock b = TetrisBlock.SQUARE.setLocation(5,2);
 	}
 
 	@Test
