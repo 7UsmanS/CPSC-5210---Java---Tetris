@@ -34,16 +34,19 @@ public class BlockGrid
 		currentColor = color;
 	}
 	
+	//Code additions made for testing DrawSquare() method
 	public Color getSquare(int x, int y)
 	{
 		return blocks[x][y];
 	}
 	
+	//Code additions made for testing DrawSquare() method
 	public Color getSquare(Point p)
 	{
 		return blocks[p.x][p.y];
 	}
 	
+	//Code additions made for testing SetColor() method
 	public Color getColor() {
 		return currentColor;
 	}
