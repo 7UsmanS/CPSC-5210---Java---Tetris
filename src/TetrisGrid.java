@@ -62,7 +62,7 @@ public class TetrisGrid extends BlockGrid
 		rowCheck();
 	}
 
-	private boolean canFit(TetrisBlock block)
+	public boolean canFit(TetrisBlock block)
 	{
 		if((block.getX() < 0) || (block.getX()+block.getWidth() > getWidth()))
 			return false;
@@ -202,5 +202,13 @@ public class TetrisGrid extends BlockGrid
 			else if(line.equals(")"))
 				grid.turnRight();
 		}
+	}
+
+	public void addLockedBlocks(TetrisBlock block) {
+		lockedBlocks.add(block);
+	}
+
+	public TetrisBlock getWorkingBlock() {
+		return workingBlock;
 	}
 }
